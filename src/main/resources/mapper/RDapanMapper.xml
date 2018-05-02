@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RDapanMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RDapan">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="xiaoliang" jdbcType="INTEGER" property="xiaoliang" />
+    <result column="xiaoshoue" jdbcType="INTEGER" property="xiaoshoue" />
+    <result column="saledproducts" jdbcType="INTEGER" property="saledproducts" />
+    <result column="avgprice" jdbcType="INTEGER" property="avgprice" />
+    <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
+    <result column="month" jdbcType="LONGVARCHAR" property="month" />
+  </resultMap>
+</mapper>

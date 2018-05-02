@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RProductMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RProduct">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="shoptype" jdbcType="INTEGER" property="shoptype" />
+    <result column="shoprate" jdbcType="INTEGER" property="shoprate" />
+    <result column="salevolume" jdbcType="INTEGER" property="salevolume" />
+    <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="listprice" jdbcType="INTEGER" property="listprice" />
+    <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
+    <result column="month" jdbcType="LONGVARCHAR" property="month" />
+    <result column="shopid" jdbcType="LONGVARCHAR" property="shopid" />
+    <result column="location_pro" jdbcType="LONGVARCHAR" property="locationPro" />
+    <result column="location_city" jdbcType="LONGVARCHAR" property="locationCity" />
+    <result column="rate1" jdbcType="LONGVARCHAR" property="rate1" />
+    <result column="rate2" jdbcType="LONGVARCHAR" property="rate2" />
+    <result column="rate3" jdbcType="LONGVARCHAR" property="rate3" />
+    <result column="shuxing1" jdbcType="LONGVARCHAR" property="shuxing1" />
+    <result column="shuxing2" jdbcType="LONGVARCHAR" property="shuxing2" />
+    <result column="shuxing3" jdbcType="LONGVARCHAR" property="shuxing3" />
+    <result column="shuxing4" jdbcType="LONGVARCHAR" property="shuxing4" />
+    <result column="shuxing5" jdbcType="LONGVARCHAR" property="shuxing5" />
+    <result column="brand" jdbcType="LONGVARCHAR" property="brand" />
+    <result column="comentcount" jdbcType="LONGVARCHAR" property="comentcount" />
+    <result column="zhanggui" jdbcType="LONGVARCHAR" property="zhanggui" />
+  </resultMap>
+</mapper>

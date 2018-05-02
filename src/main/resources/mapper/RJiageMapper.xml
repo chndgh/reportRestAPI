@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RJiageMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RJiage">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="start_price" jdbcType="INTEGER" property="startPrice" />
+    <result column="end_price" jdbcType="INTEGER" property="endPrice" />
+    <result column="xiaoshoue" jdbcType="INTEGER" property="xiaoshoue" />
+    <result column="xiaoshouehuanbi" jdbcType="DOUBLE" property="xiaoshouehuanbi" />
+    <result column="xiaoliang" jdbcType="INTEGER" property="xiaoliang" />
+    <result column="xiaolianghuanbi" jdbcType="DOUBLE" property="xiaolianghuanbi" />
+    <result column="saledproducts" jdbcType="INTEGER" property="saledproducts" />
+    <result column="comentcount" jdbcType="INTEGER" property="comentcount" />
+    <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
+    <result column="month" jdbcType="LONGVARCHAR" property="month" />
+  </resultMap>
+</mapper>

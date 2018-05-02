@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.RMaijiaMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RMaijia">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="xinji" jdbcType="INTEGER" property="xinji" />
+    <result column="zuanji" jdbcType="INTEGER" property="zuanji" />
+    <result column="huangguan" jdbcType="INTEGER" property="huangguan" />
+    <result column="jinhuangguan" jdbcType="INTEGER" property="jinhuangguan" />
+    <result column="tianmao" jdbcType="INTEGER" property="tianmao" />
+    <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
+    <result column="month" jdbcType="LONGVARCHAR" property="month" />
+  </resultMap>
+</mapper>
