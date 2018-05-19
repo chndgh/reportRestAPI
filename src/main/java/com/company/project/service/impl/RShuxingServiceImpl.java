@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 /**
@@ -19,4 +20,7 @@ public class RShuxingServiceImpl extends AbstractService<RShuxing> implements RS
     @Resource
     private RShuxingMapper rShuxingMapper;
 
+    public List<RShuxing> findbyShuxing(Long categoryid, String month, String shuxing){
+        return rShuxingMapper.findByShuxingAndCategoryidAndMonth(categoryid,month,shuxing);
+    }
 }

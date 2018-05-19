@@ -67,7 +67,7 @@ public class RDapanController {
                                            @RequestParam String month){
 
         Condition condition =  new Condition(RDapan.class);
-        condition.createCriteria().andEqualTo("categoryId",categoryId).andEqualTo("month",month);
+        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
         RDapan dapan = rDapanService.findByCondition(condition).get(0);
         return  ResultGenerator.genSuccessResult(dapan);
     }

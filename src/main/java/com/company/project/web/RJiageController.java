@@ -66,8 +66,8 @@ public class RJiageController {
     public Result getJiageBackCategoryId(@RequestParam Long  categoryId,
                                            @RequestParam String month){
         Condition condition =  new Condition(RJiage.class);
-        condition.createCriteria().andEqualTo("categoryId",categoryId).andEqualTo("month",month);
-        RJiage jiage = rJiageService.findByCondition(condition).get(0);
-        return  ResultGenerator.genSuccessResult(jiage);
+        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
+        List<RJiage> jiages = rJiageService.findByCondition(condition);
+        return  ResultGenerator.genSuccessResult(jiages);
     }
 }

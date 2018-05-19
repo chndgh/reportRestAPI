@@ -52,6 +52,8 @@ public class RProduct {
 
     private String zhanggui;
 
+    private String goodsid;
+
     /**
      * @return id
      */
@@ -358,5 +360,19 @@ public class RProduct {
      */
     public void setZhanggui(String zhanggui) {
         this.zhanggui = zhanggui;
+    }
+
+    /**
+     * @return goodsid
+     */
+    public String getGoodsid() {
+        return goodsid;
+    }
+
+    /**
+     * @param goodsid
+     */
+    public void setGoodsid(String goodsid) {
+        this.goodsid = goodsid;
     }
 }

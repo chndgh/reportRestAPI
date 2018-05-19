@@ -64,10 +64,11 @@ public class RShuxingController {
     })
     @GetMapping("/categoryId")
     public Result getShuxingByBackCategoryId(@RequestParam Long  categoryId,
-                                           @RequestParam String month){
-        Condition condition =  new Condition(RShuxing.class);
-        condition.createCriteria().andEqualTo("categoryId",categoryId).andEqualTo("month",month);
-        RShuxing shuxing = rShuxingService.findByCondition(condition).get(0);
-        return  ResultGenerator.genSuccessResult(shuxing);
+                                           @RequestParam String month,
+                                            @RequestParam String shuxingitem){
+        List<RShuxing> shuxings = rShuxingService.findbyShuxing(categoryId,month,shuxingitem);
+        return  ResultGenerator.genSuccessResult(shuxings);
     }
+
+
 }

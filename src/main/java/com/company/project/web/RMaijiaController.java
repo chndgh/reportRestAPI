@@ -67,7 +67,7 @@ public class RMaijiaController {
     public Result getMaijiaByBackCategoryId(@RequestParam Long  categoryId,
                                            @RequestParam String month){
         Condition condition =  new Condition(RMaijia.class);
-        condition.createCriteria().andEqualTo("categoryId",categoryId).andEqualTo("month",month);
+        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
         RMaijia maijia = rMaijiaService.findByCondition(condition).get(0);
         return  ResultGenerator.genSuccessResult(maijia);
     }

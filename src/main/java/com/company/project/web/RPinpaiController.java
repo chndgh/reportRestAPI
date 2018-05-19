@@ -65,8 +65,8 @@ public class RPinpaiController {
     public Result getPinpaiByBackCategoryId(@RequestParam Long  categoryId,
                                            @RequestParam String month){
         Condition condition =  new Condition(RPinpai.class);
-        condition.createCriteria().andEqualTo("categoryId",categoryId).andEqualTo("month",month);
-        RPinpai pinpai = rPinpaiService.findByCondition(condition).get(0);
-        return  ResultGenerator.genSuccessResult(pinpai);
+        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
+        List<RPinpai> pinpais = rPinpaiService.findByCondition(condition);
+        return  ResultGenerator.genSuccessResult(pinpais);
     }
 }

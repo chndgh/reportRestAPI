@@ -28,7 +28,6 @@ public class RShuxing {
 
     private String shuxing;
 
-    @Column(name = "shuxing_sub")
     private String shuxingSub;
 
     /**

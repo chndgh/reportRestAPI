@@ -4,7 +4,7 @@ import com.company.project.core.Service;
 
 
 /**
- * Created by CodeGenerator on 2018/04/30.
+ * Created by CodeGenerator on 2018/05/19.
  */
 public interface RProductService extends Service<RProduct> {
 

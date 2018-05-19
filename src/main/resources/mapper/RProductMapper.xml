@@ -27,5 +27,6 @@
     <result column="brand" jdbcType="LONGVARCHAR" property="brand" />
     <result column="comentcount" jdbcType="LONGVARCHAR" property="comentcount" />
     <result column="zhanggui" jdbcType="LONGVARCHAR" property="zhanggui" />
+    <result column="goodsid" jdbcType="LONGVARCHAR" property="goodsid" />
   </resultMap>
 </mapper>

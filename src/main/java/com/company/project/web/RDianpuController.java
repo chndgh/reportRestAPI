@@ -65,8 +65,8 @@ public class RDianpuController {
     public Result getDianpuByBackCategoryId(@RequestParam Long  categoryId,
                                            @RequestParam String month){
         Condition condition =  new Condition(RDianpu.class);
-        condition.createCriteria().andEqualTo("categoryId",categoryId).andEqualTo("month",month);
-        RDianpu dianpu = rDianpuService.findByCondition(condition).get(0);
-        return  ResultGenerator.genSuccessResult(dianpu);
+        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
+        List<RDianpu> dianpus = rDianpuService.findByCondition(condition);
+        return  ResultGenerator.genSuccessResult(dianpus);
     }
 }
