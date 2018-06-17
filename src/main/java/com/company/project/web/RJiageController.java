@@ -16,8 +16,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* Created by CodeGenerator on 2018/04/29.
-*/
+ * Created by CodeGenerator on 2018/04/29.
+ */
 @RestController
 @RequestMapping("/r/jiage")
 public class RJiageController {
@@ -60,13 +60,15 @@ public class RJiageController {
     @ApiOperation(value="获取价格分析数据", notes="根据后台categoryId, 获取价格分析数据")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "categoryId", value = "后台cateId", required = true, dataType = "Integer", paramType = "query"),
-            @ApiImplicitParam(name = "month", value = "月份", required = true, dataType = "String", paramType = "query")
+            @ApiImplicitParam(name = "month", value = "月份", required = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "shoptype", value = "类型", required = true, dataType = "Long", paramType = "query")
     })
-    @GetMapping("/categoryId")
-    public Result getJiageBackCategoryId(@RequestParam Long  categoryId,
-                                           @RequestParam String month){
+    @GetMapping("/{categoryId}/categoryId/{month}/month/{shoptype}/shoptype")
+    public Result getJiageBackCategoryId(@PathVariable Long  categoryId,
+                                         @PathVariable String month,
+                                         @PathVariable Long shoptype){
         Condition condition =  new Condition(RJiage.class);
-        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
+        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month).andEqualTo("shoptype",shoptype);
         List<RJiage> jiages = rJiageService.findByCondition(condition);
         return  ResultGenerator.genSuccessResult(jiages);
     }

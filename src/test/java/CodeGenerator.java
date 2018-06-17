@@ -18,9 +18,9 @@ import static com.company.project.core.ProjectConstant.*;
  */
 public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/taobaocrawler";
-    private static final String JDBC_USERNAME = "root";
-    private static final String JDBC_PASSWORD = "";
+    private static final String JDBC_URL = "jdbc:mysql://106.14.135.7:3306/taobaocrawler";
+    private static final String JDBC_USERNAME = "taobaocrawler";
+    private static final String JDBC_PASSWORD = "Oracle123";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
 
     private static final String PROJECT_PATH = System.getProperty("user.dir");//项目在硬盘上的基础路径
@@ -37,7 +37,7 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("r_product","r_dapan","r_dianpu","r_maijia","r_pinpai","r_shuxing","r_jiage","t_back_category");
+        genCode("r_product","r_dapan","r_dianpu","r_dianpu_shangpin","r_maijia","r_maijia_dianpufenbu","r_maijia_fugaidu","r_pinpai","r_shuxing","r_jiage","t_back_category");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 

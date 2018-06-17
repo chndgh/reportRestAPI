@@ -16,8 +16,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* Created by CodeGenerator on 2018/04/29.
-*/
+ * Created by CodeGenerator on 2018/04/29.
+ */
 @RestController
 @RequestMapping("/r/pinpai")
 public class RPinpaiController {
@@ -58,15 +58,25 @@ public class RPinpaiController {
 
     @ApiOperation(value="获取品牌分析数据", notes="根据后台categoryId,获取品牌分析数据")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "categoryId", value = "后台cateId", required = true, dataType = "Integer", paramType = "query"),
-            @ApiImplicitParam(name = "month", value = "月份", required = true, dataType = "String", paramType = "query")
+            @ApiImplicitParam(name = "categoryId", value = "后台cateId", required = true, dataType = "Long", paramType = "query"),
+            @ApiImplicitParam(name = "month", value = "月份", required = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "shoptype", value = "店铺类型", required = true, dataType = "Long", paramType = "query"),
+            @ApiImplicitParam(name = "page", value = "页码", required = true, dataType = "Integer", paramType = "query"),
+            @ApiImplicitParam(name = "size", value = "页面大小", required = true, dataType = "Integer", paramType = "query")
     })
-    @GetMapping("/categoryId")
-    public Result getPinpaiByBackCategoryId(@RequestParam Long  categoryId,
-                                           @RequestParam String month){
+    @GetMapping("/{categoryId}/categoryId/{month}/month/{shoptype}/shoptype")
+    public Result getPinpaiByBackCategoryId(@PathVariable Long  categoryId,
+                                            @PathVariable String month,
+                                            @PathVariable Long shoptype,
+                                            @RequestParam(defaultValue = "0") Integer page,
+                                            @RequestParam(defaultValue = "0") Integer size){
         Condition condition =  new Condition(RPinpai.class);
-        condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
+        condition.createCriteria().andEqualTo("categoryid",categoryId)
+                                  .andEqualTo("month",month)
+                                  .andEqualTo("shoptype",shoptype);
+        PageHelper.startPage(page,size);
         List<RPinpai> pinpais = rPinpaiService.findByCondition(condition);
-        return  ResultGenerator.genSuccessResult(pinpais);
+        PageInfo pageInfo = new PageInfo(pinpais);
+        return  ResultGenerator.genSuccessResult(pageInfo);
     }
 }

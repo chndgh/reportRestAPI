@@ -8,17 +8,29 @@ public class RDapan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private Integer shoptype;
+
     private Integer xiaoliang;
 
     private Integer xiaoshoue;
 
     private Integer saledproducts;
 
-    private Integer avgprice;
+    private Integer activeshop;
 
-    private String categoryid;
+    private Double avgprice;
+
+    private Double discount;
+
+    private Integer xiaofeirenshu;
+
+    private Double kedanjia;
+
+    private Integer activebrand;
 
     private String month;
+
+    private String categoryid;
 
     /**
      * @return id
@@ -32,6 +44,20 @@ public class RDapan {
      */
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    /**
+     * @return shoptype
+     */
+    public Integer getShoptype() {
+        return shoptype;
+    }
+
+    /**
+     * @param shoptype
+     */
+    public void setShoptype(Integer shoptype) {
+        this.shoptype = shoptype;
     }
 
     /**
@@ -77,31 +103,87 @@ public class RDapan {
     }
 
     /**
+     * @return activeshop
+     */
+    public Integer getActiveshop() {
+        return activeshop;
+    }
+
+    /**
+     * @param activeshop
+     */
+    public void setActiveshop(Integer activeshop) {
+        this.activeshop = activeshop;
+    }
+
+    /**
      * @return avgprice
      */
-    public Integer getAvgprice() {
+    public Double getAvgprice() {
         return avgprice;
     }
 
     /**
      * @param avgprice
      */
-    public void setAvgprice(Integer avgprice) {
+    public void setAvgprice(Double avgprice) {
         this.avgprice = avgprice;
     }
 
     /**
-     * @return categoryid
+     * @return discount
      */
-    public String getCategoryid() {
-        return categoryid;
+    public Double getDiscount() {
+        return discount;
     }
 
     /**
-     * @param categoryid
+     * @param discount
      */
-    public void setCategoryid(String categoryid) {
-        this.categoryid = categoryid;
+    public void setDiscount(Double discount) {
+        this.discount = discount;
+    }
+
+    /**
+     * @return xiaofeirenshu
+     */
+    public Integer getXiaofeirenshu() {
+        return xiaofeirenshu;
+    }
+
+    /**
+     * @param xiaofeirenshu
+     */
+    public void setXiaofeirenshu(Integer xiaofeirenshu) {
+        this.xiaofeirenshu = xiaofeirenshu;
+    }
+
+    /**
+     * @return kedanjia
+     */
+    public Double getKedanjia() {
+        return kedanjia;
+    }
+
+    /**
+     * @param kedanjia
+     */
+    public void setKedanjia(Double kedanjia) {
+        this.kedanjia = kedanjia;
+    }
+
+    /**
+     * @return activebrand
+     */
+    public Integer getActivebrand() {
+        return activebrand;
+    }
+
+    /**
+     * @param activebrand
+     */
+    public void setActivebrand(Integer activebrand) {
+        this.activebrand = activebrand;
     }
 
     /**
@@ -116,5 +198,19 @@ public class RDapan {
      */
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    /**
+     * @return categoryid
+     */
+    public String getCategoryid() {
+        return categoryid;
+    }
+
+    /**
+     * @param categoryid
+     */
+    public void setCategoryid(String categoryid) {
+        this.categoryid = categoryid;
     }
 }

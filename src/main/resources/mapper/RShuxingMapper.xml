@@ -7,12 +7,13 @@
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="xiaoshoue" jdbcType="INTEGER" property="xiaoshoue" />
+    <result column="shichangfene" jdbcType="DOUBLE" property="shichangfene" />
     <result column="xiaoliang" jdbcType="INTEGER" property="xiaoliang" />
     <result column="saledproducts" jdbcType="INTEGER" property="saledproducts" />
-    <result column="avgprice" jdbcType="INTEGER" property="avgprice" />
-    <result column="kedanjia" jdbcType="INTEGER" property="kedanjia" />
+    <result column="avgprice" jdbcType="DOUBLE" property="avgprice" />
+    <result column="kedanjia" jdbcType="DOUBLE" property="kedanjia" />
     <result column="discount" jdbcType="DOUBLE" property="discount" />
-    <result column="comentcount" jdbcType="INTEGER" property="comentcount" />
+    <result column="xiaofeirenshu" jdbcType="INTEGER" property="xiaofeirenshu" />
     <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
     <result column="month" jdbcType="LONGVARCHAR" property="month" />
     <result column="shuxing" jdbcType="LONGVARCHAR" property="shuxing" />

@@ -8,6 +8,8 @@ public class RJiage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private Integer shoptype;
+
     @Column(name = "start_price")
     private Integer startPrice;
 
@@ -24,7 +26,7 @@ public class RJiage {
 
     private Integer saledproducts;
 
-    private Integer comentcount;
+    private Integer xiaofeirenshu;
 
     private String categoryid;
 
@@ -42,6 +44,20 @@ public class RJiage {
      */
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    /**
+     * @return shoptype
+     */
+    public Integer getShoptype() {
+        return shoptype;
+    }
+
+    /**
+     * @param shoptype
+     */
+    public void setShoptype(Integer shoptype) {
+        this.shoptype = shoptype;
     }
 
     /**
@@ -143,17 +159,17 @@ public class RJiage {
     }
 
     /**
-     * @return comentcount
+     * @return xiaofeirenshu
      */
-    public Integer getComentcount() {
-        return comentcount;
+    public Integer getXiaofeirenshu() {
+        return xiaofeirenshu;
     }
 
     /**
-     * @param comentcount
+     * @param xiaofeirenshu
      */
-    public void setComentcount(Integer comentcount) {
-        this.comentcount = comentcount;
+    public void setXiaofeirenshu(Integer xiaofeirenshu) {
+        this.xiaofeirenshu = xiaofeirenshu;
     }
 
     /**

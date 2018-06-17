@@ -48,11 +48,15 @@ public class RProduct {
 
     private String brand;
 
-    private String comentcount;
+    private String xiaofeirenshu;
 
     private String zhanggui;
 
     private String goodsid;
+
+    private String shopname;
+
+    private String goodstitle;
 
     /**
      * @return id
@@ -335,17 +339,17 @@ public class RProduct {
     }
 
     /**
-     * @return comentcount
+     * @return xiaofeirenshu
      */
-    public String getComentcount() {
-        return comentcount;
+    public String getXiaofeirenshu() {
+        return xiaofeirenshu;
     }
 
     /**
-     * @param comentcount
+     * @param xiaofeirenshu
      */
-    public void setComentcount(String comentcount) {
-        this.comentcount = comentcount;
+    public void setXiaofeirenshu(String xiaofeirenshu) {
+        this.xiaofeirenshu = xiaofeirenshu;
     }
 
     /**
@@ -374,5 +378,33 @@ public class RProduct {
      */
     public void setGoodsid(String goodsid) {
         this.goodsid = goodsid;
+    }
+
+    /**
+     * @return shopname
+     */
+    public String getShopname() {
+        return shopname;
+    }
+
+    /**
+     * @param shopname
+     */
+    public void setShopname(String shopname) {
+        this.shopname = shopname;
+    }
+
+    /**
+     * @return goodstitle
+     */
+    public String getGoodstitle() {
+        return goodstitle;
+    }
+
+    /**
+     * @param goodstitle
+     */
+    public void setGoodstitle(String goodstitle) {
+        this.goodstitle = goodstitle;
     }
 }

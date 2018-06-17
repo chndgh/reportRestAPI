@@ -6,16 +6,17 @@
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="shoptype" jdbcType="INTEGER" property="shoptype" />
     <result column="xiaoshoue" jdbcType="INTEGER" property="xiaoshoue" />
     <result column="xiaoliang" jdbcType="INTEGER" property="xiaoliang" />
     <result column="activeshop" jdbcType="INTEGER" property="activeshop" />
     <result column="saledproducts" jdbcType="INTEGER" property="saledproducts" />
-    <result column="avglistprice" jdbcType="INTEGER" property="avglistprice" />
-    <result column="avgprice" jdbcType="INTEGER" property="avgprice" />
+    <result column="avgprice" jdbcType="DOUBLE" property="avgprice" />
+    <result column="kedanjia" jdbcType="DOUBLE" property="kedanjia" />
     <result column="discount" jdbcType="DOUBLE" property="discount" />
-    <result column="comentcount" jdbcType="INTEGER" property="comentcount" />
-    <result column="brand" jdbcType="LONGVARCHAR" property="brand" />
+    <result column="xiaofeirenshu" jdbcType="INTEGER" property="xiaofeirenshu" />
     <result column="month" jdbcType="LONGVARCHAR" property="month" />
     <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
+    <result column="brand" jdbcType="LONGVARCHAR" property="brand" />
   </resultMap>
 </mapper>

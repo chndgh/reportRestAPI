@@ -2,37 +2,33 @@ package com.company.project.model;
 
 import javax.persistence.*;
 
-@Table(name = "r_dianpu")
-public class RDianpu {
+@Table(name = "r_dianpu_shangpin")
+public class RDianpuShangpin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Integer shoptype;
 
+    private Integer price;
+
     private Integer xiaoshoue;
 
     private Integer xiaoliang;
 
-    private Integer saledproducts;
-
-    private Double kedanjia;
-
-    private Double avgprice;
+    private Integer shoucangrenshu;
 
     private Integer xiaofeirenshu;
 
-    private Double pricedist;
+    private Integer leijipinglun;
 
     private String month;
 
     private String categoryid;
 
-    private String shopid;
+    private String goodsid;
 
     private String shopname;
-
-    private String location;
 
     /**
      * @return id
@@ -60,6 +56,20 @@ public class RDianpu {
      */
     public void setShoptype(Integer shoptype) {
         this.shoptype = shoptype;
+    }
+
+    /**
+     * @return price
+     */
+    public Integer getPrice() {
+        return price;
+    }
+
+    /**
+     * @param price
+     */
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
     /**
@@ -91,45 +101,17 @@ public class RDianpu {
     }
 
     /**
-     * @return saledproducts
+     * @return shoucangrenshu
      */
-    public Integer getSaledproducts() {
-        return saledproducts;
+    public Integer getShoucangrenshu() {
+        return shoucangrenshu;
     }
 
     /**
-     * @param saledproducts
+     * @param shoucangrenshu
      */
-    public void setSaledproducts(Integer saledproducts) {
-        this.saledproducts = saledproducts;
-    }
-
-    /**
-     * @return kedanjia
-     */
-    public Double getKedanjia() {
-        return kedanjia;
-    }
-
-    /**
-     * @param kedanjia
-     */
-    public void setKedanjia(Double kedanjia) {
-        this.kedanjia = kedanjia;
-    }
-
-    /**
-     * @return avgprice
-     */
-    public Double getAvgprice() {
-        return avgprice;
-    }
-
-    /**
-     * @param avgprice
-     */
-    public void setAvgprice(Double avgprice) {
-        this.avgprice = avgprice;
+    public void setShoucangrenshu(Integer shoucangrenshu) {
+        this.shoucangrenshu = shoucangrenshu;
     }
 
     /**
@@ -147,17 +129,17 @@ public class RDianpu {
     }
 
     /**
-     * @return pricedist
+     * @return leijipinglun
      */
-    public Double getPricedist() {
-        return pricedist;
+    public Integer getLeijipinglun() {
+        return leijipinglun;
     }
 
     /**
-     * @param pricedist
+     * @param leijipinglun
      */
-    public void setPricedist(Double pricedist) {
-        this.pricedist = pricedist;
+    public void setLeijipinglun(Integer leijipinglun) {
+        this.leijipinglun = leijipinglun;
     }
 
     /**
@@ -189,17 +171,17 @@ public class RDianpu {
     }
 
     /**
-     * @return shopid
+     * @return goodsid
      */
-    public String getShopid() {
-        return shopid;
+    public String getGoodsid() {
+        return goodsid;
     }
 
     /**
-     * @param shopid
+     * @param goodsid
      */
-    public void setShopid(String shopid) {
-        this.shopid = shopid;
+    public void setGoodsid(String goodsid) {
+        this.goodsid = goodsid;
     }
 
     /**
@@ -214,19 +196,5 @@ public class RDianpu {
      */
     public void setShopname(String shopname) {
         this.shopname = shopname;
-    }
-
-    /**
-     * @return location
-     */
-    public String getLocation() {
-        return location;
-    }
-
-    /**
-     * @param location
-     */
-    public void setLocation(String location) {
-        this.location = location;
     }
 }

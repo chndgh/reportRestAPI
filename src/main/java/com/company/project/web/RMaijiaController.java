@@ -1,8 +1,9 @@
 package com.company.project.web;
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
-import com.company.project.model.RDapan;
 import com.company.project.model.RMaijia;
+import com.company.project.service.RMaijiaDianpufenbuService;
+import com.company.project.service.RMaijiaFugaiduService;
 import com.company.project.service.RMaijiaService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -17,13 +18,14 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* Created by CodeGenerator on 2018/04/29.
-*/
+ * Created by CodeGenerator on 2018/04/29.
+ */
 @RestController
 @RequestMapping("/r/maijia")
 public class RMaijiaController {
     @Resource
     private RMaijiaService rMaijiaService;
+
     @ApiIgnore
     @PostMapping("/add")
     public Result add(RMaijia rMaijia) {
@@ -63,9 +65,9 @@ public class RMaijiaController {
             @ApiImplicitParam(name = "categoryId", value = "后台cateId", required = true, dataType = "Integer", paramType = "query"),
             @ApiImplicitParam(name = "month", value = "月份", required = true, dataType = "String", paramType = "query")
     })
-    @GetMapping("/categoryId")
-    public Result getMaijiaByBackCategoryId(@RequestParam Long  categoryId,
-                                           @RequestParam String month){
+    @GetMapping("/{categoryId}/categoryId/{month}/month")
+    public Result getMaijiaByBackCategoryId(@PathVariable Long  categoryId,
+                                            @PathVariable String month){
         Condition condition =  new Condition(RMaijia.class);
         condition.createCriteria().andEqualTo("categoryid",categoryId).andEqualTo("month",month);
         RMaijia maijia = rMaijiaService.findByCondition(condition).get(0);

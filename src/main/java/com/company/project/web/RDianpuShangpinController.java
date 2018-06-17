@@ -1,8 +1,8 @@
 package com.company.project.web;
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
-import com.company.project.model.RDianpu;
-import com.company.project.service.RDianpuService;
+import com.company.project.model.RDianpuShangpin;
+import com.company.project.service.RDianpuShangpinService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.ApiImplicitParam;
@@ -16,47 +16,52 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Created by CodeGenerator on 2018/04/29.
- */
+* Created by CodeGenerator on 2018/06/17.
+*/
 @RestController
-@RequestMapping("/r/dianpu")
-public class RDianpuController {
+@RequestMapping("/r/dianpu/shangpin")
+public class RDianpuShangpinController {
     @Resource
-    private RDianpuService rDianpuService;
+    private RDianpuShangpinService rDianpuShangpinService;
+
     @ApiIgnore
     @PostMapping("/add")
-    public Result add(RDianpu rDianpu) {
-        rDianpuService.save(rDianpu);
+    public Result add(RDianpuShangpin rDianpuShangpin) {
+        rDianpuShangpinService.save(rDianpuShangpin);
         return ResultGenerator.genSuccessResult();
     }
+
     @ApiIgnore
     @PostMapping("/delete")
     public Result delete(@RequestParam Integer id) {
-        rDianpuService.deleteById(id);
+        rDianpuShangpinService.deleteById(id);
         return ResultGenerator.genSuccessResult();
     }
+
     @ApiIgnore
     @PostMapping("/update")
-    public Result update(RDianpu rDianpu) {
-        rDianpuService.update(rDianpu);
+    public Result update(RDianpuShangpin rDianpuShangpin) {
+        rDianpuShangpinService.update(rDianpuShangpin);
         return ResultGenerator.genSuccessResult();
     }
+
     @ApiIgnore
     @PostMapping("/detail")
     public Result detail(@RequestParam Integer id) {
-        RDianpu rDianpu = rDianpuService.findById(id);
-        return ResultGenerator.genSuccessResult(rDianpu);
+        RDianpuShangpin rDianpuShangpin = rDianpuShangpinService.findById(id);
+        return ResultGenerator.genSuccessResult(rDianpuShangpin);
     }
+
     @ApiIgnore
     @PostMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);
-        List<RDianpu> list = rDianpuService.findAll();
+        List<RDianpuShangpin> list = rDianpuShangpinService.findAll();
         PageInfo pageInfo = new PageInfo(list);
         return ResultGenerator.genSuccessResult(pageInfo);
     }
 
-    @ApiOperation(value="获取店铺分析数据", notes="根据后台categoryId, 获取店铺分析数据")
+    @ApiOperation(value="获取店铺商品分析数据", notes="根据后台categoryId, 获取店铺商品分析数据")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "categoryId", value = "后台cateId", required = true, dataType = "Integer", paramType = "query"),
             @ApiImplicitParam(name = "month", value = "月份", required = true, dataType = "String", paramType = "query"),
@@ -65,19 +70,18 @@ public class RDianpuController {
             @ApiImplicitParam(name = "size", value = "页面大小", required = true, dataType = "Integer", paramType = "query")
     })
     @GetMapping("/{categoryId}/categoryId/{month}/month/{shoptype}/shoptype")
-    public Result getDianpuByBackCategoryId(@PathVariable Long  categoryId,
+    public Result getDianpuShangpinByBackCategoryId(@PathVariable Long  categoryId,
                                             @PathVariable String month,
                                             @PathVariable Long shoptype,
                                             @RequestParam(defaultValue = "0") Integer page,
                                             @RequestParam(defaultValue = "0") Integer size){
-        Condition condition =  new Condition(RDianpu.class);
+        Condition condition =  new Condition(RDianpuShangpin.class);
         condition.createCriteria().andEqualTo("categoryid",categoryId)
-                                  .andEqualTo("month",month)
-                                  .andEqualTo("shoptype",shoptype);
+                .andEqualTo("month",month)
+                .andEqualTo("shoptype",shoptype);
         PageHelper.startPage(page, size);
-        List<RDianpu> dianpus = rDianpuService.findByCondition(condition);
+        List<RDianpuShangpin> dianpus = rDianpuShangpinService.findByCondition(condition);
         PageInfo pageInfo = new PageInfo(dianpus);
         return  ResultGenerator.genSuccessResult(pageInfo);
     }
 }
-

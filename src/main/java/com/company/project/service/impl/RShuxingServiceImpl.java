@@ -12,7 +12,7 @@ import java.util.List;
 
 
 /**
- * Created by CodeGenerator on 2018/04/30.
+ * Created by CodeGenerator on 2018/06/17.
  */
 @Service
 @Transactional
@@ -23,4 +23,5 @@ public class RShuxingServiceImpl extends AbstractService<RShuxing> implements RS
     public List<RShuxing> findbyShuxing(Long categoryid, String month, String shuxing){
         return rShuxingMapper.findByShuxingAndCategoryidAndMonth(categoryid,month,shuxing);
     }
+
 }

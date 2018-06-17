@@ -4,7 +4,7 @@ import com.company.project.core.Service;
 
 
 /**
- * Created by CodeGenerator on 2018/04/30.
+ * Created by CodeGenerator on 2018/06/17.
  */
 public interface RPinpaiService extends Service<RPinpai> {
 

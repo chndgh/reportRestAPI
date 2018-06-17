@@ -8,6 +8,8 @@ public class RPinpai {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private Integer shoptype;
+
     private Integer xiaoshoue;
 
     private Integer xiaoliang;
@@ -16,19 +18,19 @@ public class RPinpai {
 
     private Integer saledproducts;
 
-    private Integer avglistprice;
+    private Double avgprice;
 
-    private Integer avgprice;
+    private Double kedanjia;
 
     private Double discount;
 
-    private Integer comentcount;
-
-    private String brand;
+    private Integer xiaofeirenshu;
 
     private String month;
 
     private String categoryid;
+
+    private String brand;
 
     /**
      * @return id
@@ -42,6 +44,20 @@ public class RPinpai {
      */
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    /**
+     * @return shoptype
+     */
+    public Integer getShoptype() {
+        return shoptype;
+    }
+
+    /**
+     * @param shoptype
+     */
+    public void setShoptype(Integer shoptype) {
+        this.shoptype = shoptype;
     }
 
     /**
@@ -101,31 +117,31 @@ public class RPinpai {
     }
 
     /**
-     * @return avglistprice
-     */
-    public Integer getAvglistprice() {
-        return avglistprice;
-    }
-
-    /**
-     * @param avglistprice
-     */
-    public void setAvglistprice(Integer avglistprice) {
-        this.avglistprice = avglistprice;
-    }
-
-    /**
      * @return avgprice
      */
-    public Integer getAvgprice() {
+    public Double getAvgprice() {
         return avgprice;
     }
 
     /**
      * @param avgprice
      */
-    public void setAvgprice(Integer avgprice) {
+    public void setAvgprice(Double avgprice) {
         this.avgprice = avgprice;
+    }
+
+    /**
+     * @return kedanjia
+     */
+    public Double getKedanjia() {
+        return kedanjia;
+    }
+
+    /**
+     * @param kedanjia
+     */
+    public void setKedanjia(Double kedanjia) {
+        this.kedanjia = kedanjia;
     }
 
     /**
@@ -143,31 +159,17 @@ public class RPinpai {
     }
 
     /**
-     * @return comentcount
+     * @return xiaofeirenshu
      */
-    public Integer getComentcount() {
-        return comentcount;
+    public Integer getXiaofeirenshu() {
+        return xiaofeirenshu;
     }
 
     /**
-     * @param comentcount
+     * @param xiaofeirenshu
      */
-    public void setComentcount(Integer comentcount) {
-        this.comentcount = comentcount;
-    }
-
-    /**
-     * @return brand
-     */
-    public String getBrand() {
-        return brand;
-    }
-
-    /**
-     * @param brand
-     */
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setXiaofeirenshu(Integer xiaofeirenshu) {
+        this.xiaofeirenshu = xiaofeirenshu;
     }
 
     /**
@@ -196,5 +198,19 @@ public class RPinpai {
      */
     public void setCategoryid(String categoryid) {
         this.categoryid = categoryid;
+    }
+
+    /**
+     * @return brand
+     */
+    public String getBrand() {
+        return brand;
+    }
+
+    /**
+     * @param brand
+     */
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }

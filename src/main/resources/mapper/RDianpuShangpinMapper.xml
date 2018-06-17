@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.company.project.dao.RDianpuMapper">
-  <resultMap id="BaseResultMap" type="com.company.project.model.RDianpu">
+<mapper namespace="com.company.project.dao.RDianpuShangpinMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.RDianpuShangpin">
     <!--
       WARNING - @mbg.generated
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="shoptype" jdbcType="INTEGER" property="shoptype" />
+    <result column="price" jdbcType="INTEGER" property="price" />
     <result column="xiaoshoue" jdbcType="INTEGER" property="xiaoshoue" />
     <result column="xiaoliang" jdbcType="INTEGER" property="xiaoliang" />
-    <result column="saledproducts" jdbcType="INTEGER" property="saledproducts" />
-    <result column="kedanjia" jdbcType="DOUBLE" property="kedanjia" />
-    <result column="avgprice" jdbcType="DOUBLE" property="avgprice" />
+    <result column="shoucangrenshu" jdbcType="INTEGER" property="shoucangrenshu" />
     <result column="xiaofeirenshu" jdbcType="INTEGER" property="xiaofeirenshu" />
-    <result column="pricedist" jdbcType="DOUBLE" property="pricedist" />
+    <result column="leijipinglun" jdbcType="INTEGER" property="leijipinglun" />
     <result column="month" jdbcType="LONGVARCHAR" property="month" />
     <result column="categoryid" jdbcType="LONGVARCHAR" property="categoryid" />
-    <result column="shopid" jdbcType="LONGVARCHAR" property="shopid" />
+    <result column="goodsid" jdbcType="LONGVARCHAR" property="goodsid" />
     <result column="shopname" jdbcType="LONGVARCHAR" property="shopname" />
-    <result column="location" jdbcType="LONGVARCHAR" property="location" />
   </resultMap>
 </mapper>

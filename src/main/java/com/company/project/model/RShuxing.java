@@ -10,17 +10,19 @@ public class RShuxing {
 
     private Integer xiaoshoue;
 
+    private Double shichangfene;
+
     private Integer xiaoliang;
 
     private Integer saledproducts;
 
-    private Integer avgprice;
+    private Double avgprice;
 
-    private Integer kedanjia;
+    private Double kedanjia;
 
     private Double discount;
 
-    private Integer comentcount;
+    private Integer xiaofeirenshu;
 
     private String categoryid;
 
@@ -28,6 +30,7 @@ public class RShuxing {
 
     private String shuxing;
 
+    @Column(name = "shuxing_sub")
     private String shuxingSub;
 
     /**
@@ -56,6 +59,20 @@ public class RShuxing {
      */
     public void setXiaoshoue(Integer xiaoshoue) {
         this.xiaoshoue = xiaoshoue;
+    }
+
+    /**
+     * @return shichangfene
+     */
+    public Double getShichangfene() {
+        return shichangfene;
+    }
+
+    /**
+     * @param shichangfene
+     */
+    public void setShichangfene(Double shichangfene) {
+        this.shichangfene = shichangfene;
     }
 
     /**
@@ -89,28 +106,28 @@ public class RShuxing {
     /**
      * @return avgprice
      */
-    public Integer getAvgprice() {
+    public Double getAvgprice() {
         return avgprice;
     }
 
     /**
      * @param avgprice
      */
-    public void setAvgprice(Integer avgprice) {
+    public void setAvgprice(Double avgprice) {
         this.avgprice = avgprice;
     }
 
     /**
      * @return kedanjia
      */
-    public Integer getKedanjia() {
+    public Double getKedanjia() {
         return kedanjia;
     }
 
     /**
      * @param kedanjia
      */
-    public void setKedanjia(Integer kedanjia) {
+    public void setKedanjia(Double kedanjia) {
         this.kedanjia = kedanjia;
     }
 
@@ -129,17 +146,17 @@ public class RShuxing {
     }
 
     /**
-     * @return comentcount
+     * @return xiaofeirenshu
      */
-    public Integer getComentcount() {
-        return comentcount;
+    public Integer getXiaofeirenshu() {
+        return xiaofeirenshu;
     }
 
     /**
-     * @param comentcount
+     * @param xiaofeirenshu
      */
-    public void setComentcount(Integer comentcount) {
-        this.comentcount = comentcount;
+    public void setXiaofeirenshu(Integer xiaofeirenshu) {
+        this.xiaofeirenshu = xiaofeirenshu;
     }
 
     /**
